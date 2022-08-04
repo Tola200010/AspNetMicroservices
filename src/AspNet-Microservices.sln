@@ -1,24 +1,59 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ECBF980A-095B-4BBA-B92A-95AA851A3910}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{7264B70C-4CFF-44EF-AA5F-4BC10D88215C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{B16C6B91-B02A-4C30-93FF-99464998C3E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{B16C6B91-B02A-4C30-93FF-99464998C3E9}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7A56BC50-F179-40C7-8E71-08655DD583F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{387E254F-7778-4A9F-B4C3-D7CB1AAA951A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{82DB6D97-931D-4054-9633-701BC0F391C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{13E9A8FB-7E2A-461C-BDB7-5DA0021D242F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.API", "Services\Discount\Discount.API\Discount.API.csproj", "{DB5D49CC-19B5-44E6-9BA5-525F0C66D835}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{7264B70C-4CFF-44EF-AA5F-4BC10D88215C} = {ECBF980A-095B-4BBA-B92A-95AA851A3910}
-		{B16C6B91-B02A-4C30-93FF-99464998C3E9} = {7264B70C-4CFF-44EF-AA5F-4BC10D88215C}
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B16C6B91-B02A-4C30-93FF-99464998C3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B16C6B91-B02A-4C30-93FF-99464998C3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B16C6B91-B02A-4C30-93FF-99464998C3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B16C6B91-B02A-4C30-93FF-99464998C3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A56BC50-F179-40C7-8E71-08655DD583F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A56BC50-F179-40C7-8E71-08655DD583F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A56BC50-F179-40C7-8E71-08655DD583F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A56BC50-F179-40C7-8E71-08655DD583F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82DB6D97-931D-4054-9633-701BC0F391C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82DB6D97-931D-4054-9633-701BC0F391C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82DB6D97-931D-4054-9633-701BC0F391C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82DB6D97-931D-4054-9633-701BC0F391C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5D49CC-19B5-44E6-9BA5-525F0C66D835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5D49CC-19B5-44E6-9BA5-525F0C66D835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5D49CC-19B5-44E6-9BA5-525F0C66D835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5D49CC-19B5-44E6-9BA5-525F0C66D835}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7264B70C-4CFF-44EF-AA5F-4BC10D88215C} = {ECBF980A-095B-4BBA-B92A-95AA851A3910}
+		{B16C6B91-B02A-4C30-93FF-99464998C3E9} = {7264B70C-4CFF-44EF-AA5F-4BC10D88215C}
+		{387E254F-7778-4A9F-B4C3-D7CB1AAA951A} = {ECBF980A-095B-4BBA-B92A-95AA851A3910}
+		{82DB6D97-931D-4054-9633-701BC0F391C0} = {387E254F-7778-4A9F-B4C3-D7CB1AAA951A}
+		{13E9A8FB-7E2A-461C-BDB7-5DA0021D242F} = {ECBF980A-095B-4BBA-B92A-95AA851A3910}
+		{DB5D49CC-19B5-44E6-9BA5-525F0C66D835} = {13E9A8FB-7E2A-461C-BDB7-5DA0021D242F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81CAC423-C79E-439E-B77A-76280AF20B90}
 	EndGlobalSection
 EndGlobal
