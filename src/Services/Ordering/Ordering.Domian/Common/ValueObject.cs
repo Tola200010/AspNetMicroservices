@@ -9,7 +9,7 @@
                 return false;
             }
 
-            return left?.Equals(right) != false;
+            return left?.Equals(right!) != false;
         }
 
         protected static bool NotEqualOperator(ValueObject left, ValueObject right)
@@ -19,7 +19,7 @@
 
         protected abstract IEnumerable<object> GetEqualityComponents();
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj == null || obj.GetType() != GetType())
             {

@@ -1,6 +1,6 @@
 ﻿namespace Ordering.Domian.Common
 {
-    public abstract class EntryBase
+    public abstract class EntityBase
     {
         public int Id { get;protected set; }
         public string? CreatedBy { get; set; }
