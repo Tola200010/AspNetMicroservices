@@ -5,13 +5,22 @@ namespace Ordering.Infrastructure.Persistence.OrderContext
 {
     public class OrderContextSeed
     {
-        public static async Task SeedAsync(OrderContext orderContext,ILogger<OrderContextSeed> logger)
+        private readonly ILogger<OrderContextSeed> _logger;
+        private readonly OrderContext _orderContext;
+
+        public OrderContextSeed(ILogger<OrderContextSeed> logger, OrderContext orderContext)
         {
-            if (!orderContext.Orders!.Any())
+            _logger = logger;
+            _orderContext = orderContext;
+        }
+
+        public async Task SeedAsync()
+        {
+            if (!_orderContext.Orders!.Any())
             {
-                orderContext.Orders!.AddRange(GetPreconfiguredOrders());
-                await orderContext.SaveChangesAsync();
-                logger.LogInformation("Seed database associated with context {DbContextName}", typeof(OrderContext).Name);
+                _orderContext.Orders!.AddRange(GetPreconfiguredOrders());
+                await _orderContext.SaveChangesAsync();
+                _logger.LogInformation("Seed database associated with context {DbContextName}", typeof(OrderContext).Name);
             }
         }
         private static IEnumerable<Order> GetPreconfiguredOrders()

@@ -7,11 +7,6 @@ using Ordering.Application.Models;
 using Ordering.Infrastructure.Mail;
 using Ordering.Infrastructure.Persistence.OrderContext;
 using Ordering.Infrastructure.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ordering.Infrastructure
 {
@@ -25,6 +20,7 @@ namespace Ordering.Infrastructure
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.Configure<EmailSettings>(config => configuration.GetSection("EmailSettings"));
             services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<OrderContextSeed>();
             return services;
         }
     }
