@@ -1,3 +1,4 @@
+using System.Reflection;
 using EventBus.Messages.Common;
 using MassTransit;
 using Ordering.API.EventBusConsumer;
@@ -22,6 +23,7 @@ builder.Services.AddMassTransit(config =>
         });
     });
 });
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

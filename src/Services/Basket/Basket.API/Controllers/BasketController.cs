@@ -24,7 +24,7 @@ namespace Basket.API.Controllers
             _mapper = mapper;
             _publishEndpoint = publishEndpoint;
         }
-        [HttpGet("{username}",Name ="GetBasket")]
+        [HttpGet("{userName}",Name ="GetBasket")]
         [ProducesResponseType(typeof(ShoppingCart),(int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> GetBasket(string username)
         {
