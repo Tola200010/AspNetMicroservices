@@ -1,0 +1,8 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="CompoundRunConfigurationType">
+    <toRun name="Basket.API" type="LaunchSettings" />
+    <toRun name="Discount.Grpc" type="LaunchSettings" />
+    <toRun name="Ordering.API" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
+</component>
